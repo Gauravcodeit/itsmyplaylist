@@ -69,7 +69,7 @@ function App() {
                 onclick={increment}
                 viewsCount={viewsCount}
                 />
-           </div >
+           </div>
             <div className="borderpd">
                 <SongCard
                 songName="wislist"
@@ -81,10 +81,61 @@ function App() {
 
 
           </div>
+          <div>Gaurav</div>
     </div>
+
 
   );
 
 }
+
+export class Apps extends React.Component {
+
+	// Constructor
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			items: [],
+			DataisLoaded: false
+		};
+	}
+
+	componentDidMount() {
+		fetch(
+"https://assessment.api.vweb.app/orders")
+			.then((res) => res.json())
+			.then((json) => {
+				this.setState({
+					items: json,
+					DataisLoaded: true
+				});
+			})
+	}
+	render() {
+		const { DataisLoaded, items } = this.state;
+		if (!DataisLoaded) return <div>
+			<h1> Pleses wait some time.... </h1> </div> ;
+
+		return (
+		<div className = "Apps">
+			<h1> Order Details of Customers</h1> {
+				items.map((item) => (
+				<ol key = { item.order_id } >
+          Order_ID:{ item.order_id },
+					Product_ID: { item.product_id },
+					quantity: { item.quantity },
+					Order_Date: { item.order_date},
+          User_ID:{item.user_id}
+
+					</ol>
+				))
+			}
+		</div>
+	);
+}
+}
+
+
 
 export default App;
