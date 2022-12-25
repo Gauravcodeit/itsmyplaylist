@@ -16,7 +16,7 @@ function App() {
     alert("Hi "+ listener)
   }
 
-  const increment = () => {
+  let increment = () => {
     setviewsCount(viewsCount + 1)
   }
 
@@ -29,9 +29,7 @@ function App() {
   return (
 
     <div className="App">
-
       <h1 className="d-flex">ItsMyPlaylist</h1>
-
       <div className="d-flex">
         <input type="text"  placeholder="User Name"
           onChange={
@@ -95,7 +93,7 @@ export class Apps extends React.Component {
   }
 
 	componentDidMount() {
-		fetch("https://assessment.api.vweb.app/orders")
+		fetch("https://hub.dummyapis.com/employee?noofRecords=7&idStarts=1001")
 			.then((res) => res.json())
 			.then((json) => {
 				this.setState({
@@ -113,19 +111,40 @@ export class Apps extends React.Component {
 
     return (
       <div className = "Apps">
-        <h1> Order Details of Customers</h1> {
-          items.map((item) => (
-          <ol key = { item.order_id } >
-            Order_ID:{ item.order_id },
-            Product_ID: { item.product_id },
-            quantity: { item.quantity },
-            Order_Date: { item.order_date},
-            User_ID:{item.user_id}
+        <h1> Order Details of Customers</h1>
+        <table>
 
-          </ol>
-          ))
-        }
+          <thead>
+            <th>emp_ID</th>
+            <th>first_Name</th>
+            <th>last_Name</th>
+            <th>Email</th>
+            <th>contact_Number</th>
+          </thead>
+
+          <tbody>
+            {
+              items.map((item) => (
+              <tr key = { item.id } >
+                <td> { item.id }</td>
+                <td> { item.firstName  }</td>
+                <td>{ item.lastName }</td>
+                <td> { item.email}</td>
+                <td> {item.contactNumber}</td>
+
+
+
+              </tr>
+              ))
+            }
+          </tbody>
+
+        </table>
+
+
+
       </div>
 	  );
   }
 }
+export default App;
