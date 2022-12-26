@@ -6,6 +6,7 @@ function App() {
 
   const [listener, setListner] = useState("Listener");
   const [viewsCount, setviewsCount] = useState(0);
+  const [viewsCount1, setviewsCount1] = useState(0);
   const usermob="Gaurav";
   const userpass="password";
   const [usermobState, setusermobState]=useState('');
@@ -62,8 +63,8 @@ function App() {
           <SongCard
             songName="Rap God"
             singerName="Eminem"
-            setcount={setviewsCount}
-            count={viewsCount} />
+            setcount={setviewsCount1}
+            count={viewsCount1} />
         </div>
         <div className="borderpd">
             <SongCard

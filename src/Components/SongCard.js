@@ -3,7 +3,7 @@ import React from 'react'
 export default function songCard(props,{songName, singerName }) {
 
 const {count,setcount}=props;
-let increment = () => {
+const increment = () => {
   setcount(count + 1)
 }
   return (
