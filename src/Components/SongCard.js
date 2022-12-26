@@ -1,8 +1,11 @@
 import React from 'react'
 
-export default function songCard({songName, singerName, onclick, viewsCount }) {
+export default function songCard(props,{songName, singerName }) {
 
-
+const {count,setcount}=props;
+let increment = () => {
+  setcount(count + 1)
+}
   return (
     <div className='row-gap' >
     <div  className='d-flex borderpd'>
@@ -11,8 +14,8 @@ export default function songCard({songName, singerName, onclick, viewsCount }) {
 
     <div>Song Name: {songName}</div>
     <div>Singer Name: {singerName}</div>
-    <div>Views:{viewsCount}</div>
-    <button  onClick={onclick}>Play button</button>
+    <div>Views:{count}</div>
+    <button  onClick={increment}>Play button</button>
 
     </div>
   )
