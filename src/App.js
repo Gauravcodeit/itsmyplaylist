@@ -16,9 +16,7 @@ function App() {
     alert("Hi "+ listener)
   }
 
-  let increment = () => {
-    setviewsCount(viewsCount + 1)
-  }
+
 
   function login() {
     if( usermobState === usermob && userpassState === userpass){
@@ -57,22 +55,22 @@ function App() {
             <SongCard
             songName="Starboy"
             singerName="Weekend"
-            onclick={increment}
-            viewsCount={viewsCount} />
+            setcount={setviewsCount}
+            count={viewsCount} />
         </div>
         <div className="borderpd">
           <SongCard
             songName="Rap God"
             singerName="Eminem"
-            onclick={increment}
-            viewsCount={viewsCount} />
+            setcount={setviewsCount}
+            count={viewsCount} />
         </div>
         <div className="borderpd">
             <SongCard
             songName="wislist"
             singerName="Dino James"
-              onclick={increment}
-            viewsCount={viewsCount} />
+            setcount={setviewsCount}
+            count={viewsCount} />
         </div>
       </div>
 
