@@ -9,18 +9,19 @@ function App() {
   const [viewsCount1, setviewsCount1] = useState(0);
   const usermob="Gaurav";
   const userpass="password";
-  const [usermobState, setusermobState]=useState('');
+  const [usernameState, setusernameState]=useState('');
   const [userpassState, setuserpassState]=useState('');
   const [loggedInState, setloggedInState]=useState(false);
 
-  function alertMyName(){
+  function alertMyName()
+  {
     alert("Hi "+ listener)
   }
 
-
-
-  function login() {
-    if( usermobState === usermob && userpassState === userpass){
+  function login()
+  {
+    if( usernameState === usermob && userpassState === userpass)
+    {
       setloggedInState(true);
     }
   }
@@ -33,7 +34,7 @@ function App() {
         <input type="text"  placeholder="User Name"
           onChange={
             (event)=> {
-              setusermobState(event.target.value);
+              setusernameState(event.target.value);
             }
           }
         required />
@@ -66,13 +67,7 @@ function App() {
             setcount={setviewsCount1}
             count={viewsCount1} />
         </div>
-        <div className="borderpd">
-            <SongCard
-            songName="wislist"
-            singerName="Dino James"
-            setcount={setviewsCount}
-            count={viewsCount} />
-        </div>
+
       </div>
 
       <div>Gaurav</div>
@@ -83,15 +78,17 @@ function App() {
 
 export class Apps extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: [],
-      DataisLoaded: false
-    };
+  constructor(props)
+  {
+      super(props);
+      this.state =
+      {
+        items: [],
+        DataisLoaded: false
+      };
   }
-
-	componentDidMount() {
+	componentDidMount()
+  {
 		fetch("https://hub.dummyapis.com/employee?noofRecords=7&idStarts=1001")
 			.then((res) => res.json())
 			.then((json) => {
@@ -101,49 +98,53 @@ export class Apps extends React.Component {
 				});
 			})
 	}
-
 	render()
   {
     const { DataisLoaded, items } = this.state;
-
     if (!DataisLoaded) return <div><h1> Pleses wait some time.... </h1> </div> ;
-
     return (
       <div className = "Apps">
         <h1> Order Details of Customers</h1>
         <table>
-
           <thead>
-            <th>emp_ID</th>
-            <th>first_Name</th>
-            <th>last_Name</th>
-            <th>Email</th>
-            <th>contact_Number</th>
+            <th>
+              emp_ID
+            </th>
+            <th>
+              first_Name
+            </th>
+            <th>
+              last_Name
+            </th>
+            <th>
+              Email
+            </th>
           </thead>
-
           <tbody>
             {
-              items.map((item) => (
-              <tr key = { item.id } >
-                <td> { item.id }</td>
-                <td> { item.firstName  }</td>
-                <td>{ item.lastName }</td>
-                <td> { item.email}</td>
-                <td> {item.contactNumber}</td>
-
-
-
-              </tr>
-              ))
+              items.map((item) =>
+               (
+                  <tr key = { item.id } >
+                    <td>
+                      { item.id }
+                    </td>
+                    <td>
+                      { item.firstName }
+                    </td>
+                    <td>
+                      { item.lastName }
+                    </td>
+                    <td>
+                      { item.email}
+                    </td>
+                  </tr>
+                ))
             }
           </tbody>
-
         </table>
-
-
-
       </div>
 	  );
   }
 }
+
 export default App;
