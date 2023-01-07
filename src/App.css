@@ -1,11 +1,26 @@
+.d-flex{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    column-gap: 1rem;
+}
+.Nav-items{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 
+}
+.Nav-items > li{
+    padding: 10px;
 
-.App .d-flex{
-display: flex;
-
-justify-content:center;
-align-items: center;
-column-gap: 1rem;
+}
+.Nav-Main{
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
 }
 .column-flex{
     display: flex;
@@ -18,7 +33,7 @@ button{
 
     margin:10px 0;
 }
-.App .d-flex2{
+.d-flex2{
     display: flex;
     row-gap: 1rem;
     justify-content:space-around;
@@ -26,7 +41,7 @@ button{
 
     }
 
-.App .d-flex2 .borderpd{
+.d-flex2 .borderpd{
     padding: 1rem;
     border: 1px solid black;
 
