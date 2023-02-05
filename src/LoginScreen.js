@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './App.css';
 
 export default function LoginScreen(){
     const usermob="Gaurav";
@@ -21,7 +20,8 @@ export default function LoginScreen(){
     }
     return(
         <>
-            <div className="d-flex">
+        <div className="container">
+        <div className="d-flex log-in-wrap">
                 <input type="text"  placeholder="User Name"
                 onChange={
                     (event)=> {
@@ -39,6 +39,8 @@ export default function LoginScreen(){
                 <button onClick={()=>{  login();  alertMyName();  setListner("Kaku");  }}>Submit</button>
             </div>
             {loggedInState && <div className="column-flex"><h4 >Logged In</h4> <h2 className="d-flex">Hello {listener}</h2></div>}
+
+        </div>
 
         </>
     )

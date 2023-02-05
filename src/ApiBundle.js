@@ -25,7 +25,7 @@ export class FirstAPI extends React.Component {
       const { DataisLoaded, items } = this.state;
       if (!DataisLoaded) return <div><h1> Pleses wait some time.... </h1> </div> ;
       return (
-        <div className = "Apps">
+        <div className = "container">
           <h1> Order Details of Customers</h1>
           <table>
             <thead>
@@ -37,9 +37,6 @@ export class FirstAPI extends React.Component {
               </th>
               <th>
                 last_Name
-              </th>
-              <th>
-                Email
               </th>
             </thead>
             <tbody>
@@ -55,9 +52,6 @@ export class FirstAPI extends React.Component {
                       </td>
                       <td>
                         { item.lastName }
-                      </td>
-                      <td>
-                        { item.email}
                       </td>
                     </tr>
                   ))

@@ -8,7 +8,7 @@ const increment = () => {
 }
   return (
     <div className='row-gap' >
-    <div  className='d-flex borderpd'>
+    <div  className='Card-Title'>
      CARD OF MAGIC
     </div>
 
