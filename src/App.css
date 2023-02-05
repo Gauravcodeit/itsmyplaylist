@@ -1,3 +1,9 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Aboreto';
+}
 .d-flex{
     display: flex;
     justify-content:center;
@@ -17,10 +23,11 @@
 .Nav-Main{
     display: flex;
     align-items: center;
-    max-width: 1440px;
     width: 100%;
     justify-content: center;
     margin: auto;
+    background: #0f2c56;
+    color: #fff;
 }
 .column-flex{
     display: flex;
@@ -41,11 +48,13 @@ button{
 
     }
 
-.d-flex2 .borderpd{
-    padding: 1rem;
-    border: 1px solid black;
-
-}
+    .song-card {
+        background: #0f2c56;
+        color: #fff;
+        padding: 1rem;
+        border: 1px solid #fff;
+        border-radius: 10px;
+    }
 .row-gap{
 
     row-gap: 1rem;

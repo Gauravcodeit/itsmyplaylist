@@ -12,14 +12,14 @@ export default function App() {
       <div className="App">
         <h1 className="d-flex">Recently Played</h1>
         <div className="d-flex2">
-          <div className="borderpd" >
+          <div className="song-card" >
               <SongCard
               songName="Starboy"
               singerName="Weekend"
               setcount={setviewsCount}
               count={viewsCount} />
           </div>
-          <div className="borderpd">
+          <div className="song-card">
             <SongCard
               songName="Rap God"
               singerName="Eminem"
