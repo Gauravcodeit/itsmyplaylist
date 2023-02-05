@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function songCard(props,{songName, singerName }) {
+export default function songCard(props) {
 
 const {count,setcount}=props;
 const increment = () => {
@@ -12,8 +12,8 @@ const increment = () => {
      CARD OF MAGIC
     </div>
 
-    <div>Song Name: {songName}</div>
-    <div>Singer Name: {singerName}</div>
+    <div>Song Name: {props.songName}</div>
+    <div>Singer Name: {props.singerName}</div>
     <div>Views:{count}</div>
     <button  onClick={increment}>Play button</button>
 
