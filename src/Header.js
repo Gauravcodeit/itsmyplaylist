@@ -1,10 +1,9 @@
 import React from "react";
-import './App.css';
 export default function Header()
 {
   return(
-    <header>
-      <nav className='Nav-Main'>
+    <header className='Nav-Main'>
+      <nav className='container nav-wrap'>
         <h1>ItsMyPlaylist</h1>
         <ul className="Nav-items">
           <li>HOME</li>

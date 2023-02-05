@@ -4,11 +4,26 @@ body{
     padding: 0;
     font-family: 'Aboreto';
 }
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+}
 .d-flex{
     display: flex;
+
+}
+.Card-Title{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+.log-in-wrap{
     justify-content:center;
     align-items: center;
     column-gap: 1rem;
+    padding: 25px;
 }
 .Nav-items{
     list-style: none;
@@ -20,14 +35,21 @@ body{
     padding: 10px;
 
 }
+.footer-wrap{
+    background: #0f2c56;
+    color: #fff;
+}
 .Nav-Main{
+
+    background: #0f2c56;
+    color: #fff;
+}
+.nav-wrap{
     display: flex;
     align-items: center;
     width: 100%;
     justify-content: center;
     margin: auto;
-    background: #0f2c56;
-    color: #fff;
 }
 .column-flex{
     display: flex;
@@ -37,27 +59,38 @@ body{
 }
 
 button{
-
     margin:10px 0;
 }
-.d-flex2{
+.d-flex2
+{
     display: flex;
     row-gap: 1rem;
     justify-content:space-around;
     align-items: space-between;
-
-    }
-
-    .song-card {
-        background: #0f2c56;
-        color: #fff;
-        padding: 1rem;
-        border: 1px solid #fff;
-        border-radius: 10px;
-    }
+}
+.song-card {
+    background: #0f2c56;
+    color: #fff;
+    padding: 1rem;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
 .row-gap{
-
     row-gap: 1rem;
     display: flex;
     flex-direction: column;
+}
+footer.footer-wrap {
+    padding: 35px 0;
+    margin-top: 70px;
+}
+
+@media (max-width:992px){
+    ul.Nav-items {
+        display: block;
+    }
+    .log-in-wrap{
+        flex-direction: column;
+        align-items: center;
+    }
 }
