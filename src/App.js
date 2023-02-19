@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SongCard from './Components/SongCard';
-
+import firstAudio from './Asset/first-audio.mp3';
 
 export default function App() {
 
@@ -10,13 +10,15 @@ export default function App() {
   <>
       <div className="App container">
         <h1 className="d-flex">Recently Played</h1>
-        <div className="d-flex2">
+        <div className="Recently-Viewed-Container">
           <div className="song-card" >
               <SongCard
               songName="Starboy"
               singerName="Weekend"
               setcount={setviewsCount}
-              count={viewsCount} />
+              count={viewsCount}
+              firstAudio={firstAudio}
+              />
           </div>
           <div className="song-card">
             <SongCard
