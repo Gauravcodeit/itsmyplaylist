@@ -6,8 +6,8 @@ body{
 }
 .container {
     max-width: 1440px;
-    width: 100%;
     margin: auto;
+    margin-inline: 15px;
 }
 .d-flex{
     display: flex;
@@ -61,12 +61,37 @@ body{
 button{
     margin:10px 0;
 }
-.d-flex2
+.Recently-Viewed-Container
 {
     display: flex;
     row-gap: 1rem;
-    justify-content:space-around;
-    align-items: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    column-gap: 15px;
+    justify-content: center;
+}
+.Recently-Viewed-Container audio {
+    width: 272px;
+}
+.Recently-Viewed-Container::-webkit-scrollbar-thumb:horizontal {
+    background: #0f2c56;
+    border-radius: 10px;
+}
+
+.song-card .row-gap{
+    min-width: 270px;
+    min-height: 270px;
+}
+.Recently-Viewed-Container::-webkit-scrollbar {
+    height: 8px;
+    width: 4px;
+    background: gray;
+}
+.Recently-Viewed-Container::-webkit-scrollbar-thumb {
+    background: #888;
+}
+.Recently-Viewed-Container::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 .song-card {
     background: #0f2c56;
@@ -92,5 +117,13 @@ footer.footer-wrap {
     .log-in-wrap{
         flex-direction: column;
         align-items: center;
+    }
+
+}
+@media (max-width :620px){
+    .Recently-Viewed-Container
+    {
+        overflow-x: scroll;
+        justify-content: start;
     }
 }

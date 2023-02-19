@@ -1,5 +1,5 @@
 import React from 'react'
-import firstAudio from '../Asset/first-audio.mp3';
+
 export default function songCard(props) {
 const {count,setcount}=props;
 const increment = () => {
@@ -10,13 +10,13 @@ const increment = () => {
     <div  className='Card-Title'>
      CARD OF MAGIC
     </div>
-    <audio
+    { props.firstAudio && <audio
         controls
-        src={firstAudio}>
-            <a href={firstAudio}>
+        src={props.firstAudio}>
+            <a href={props.firstAudio}>
                 Download audio
             </a>
-    </audio>
+    </audio> }
     <div>Song Name: {props.songName}</div>
     <div>Singer Name: {props.singerName}</div>
     <div>Views:{count}</div>
