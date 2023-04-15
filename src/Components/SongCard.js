@@ -3,7 +3,10 @@ import React from 'react'
 export default function songCard(props) {
 const {count,setcount}=props;
 const increment = () => {
-  setcount(count + 1)
+  setcount(prevVal => prevVal + 1)
+}
+const addToPlalist=(e)=>{
+  console.log("added to playlist")
 }
   return (
     <div className='row-gap' >
@@ -20,6 +23,7 @@ const increment = () => {
     <div>Song Name: {props.songName}</div>
     <div>Singer Name: {props.singerName}</div>
     <div>Views:{count}</div>
+    <div onClick={addToPlalist}>Add To playlist</div>
     <button  onClick={increment}>Play button</button>
 
     </div>
